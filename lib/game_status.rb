@@ -52,3 +52,8 @@ def over?(board)
   end
   is_over
 end
+
+# winner
+def winner(board)
+  return won?(board)[0]
+end
