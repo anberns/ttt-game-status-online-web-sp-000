@@ -34,7 +34,7 @@ def full?(board)
 end
 
 # draw?
-def draw(board)
+def draw?(board)
   is_draw = false 
   
   if full?(board) && !won?(board)
