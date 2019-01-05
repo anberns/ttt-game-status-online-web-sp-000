@@ -43,3 +43,12 @@ def draw?(board)
   
   is_draw
 end
+
+# over?
+def over?(board)
+  is_over = false 
+  if won?(board) || draw?(board) || full?(board)
+    is_over = true 
+  end
+  is_over
+end
