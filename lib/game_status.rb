@@ -15,6 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
+# won?
 def won?(board)
   WIN_COMBINATIONS.each do |combo|
     if board[combo[0]] != " " && board[combo[0]] == board[combo[1]] && board[combo[0]] == board[combo[2]]
@@ -24,9 +25,21 @@ def won?(board)
   nil 
 end
 
+# full?
 def full?(board)
   is_full = board.all? do |el|
     el == "X" || el == "O"
   end
   is_full
+end
+
+# draw?
+def draw(board)
+  is_draw = false 
+  
+  if full?(board) && !won?(board)
+    is_draw = true 
+  end
+  
+  is_draw
 end
