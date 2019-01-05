@@ -29,4 +29,4 @@ def full?(board)
     el == "X" || el "O"
   end
   is_full
-end
+respond_to
