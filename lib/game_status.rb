@@ -23,3 +23,10 @@ def won?(board)
   end
   nil 
 end
+
+def full?(board)
+  is_full = board.all? do |el|
+    el == "X" || el "O"
+  end
+  is_full
+end
